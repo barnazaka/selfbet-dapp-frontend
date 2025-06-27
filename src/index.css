@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Orbitron', sans-serif;
+    @apply bg-black text-white;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500;
+  }
+  .card-shadow {
+    @apply shadow-xl hover:shadow-cyan-500/30 transition-shadow duration-300;
+  }
+  .input-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-cyan-500;
+  }
+  .dropdown {
+    @apply absolute right-0 mt-2 w-48 bg-gray-800/90 backdrop-blur-md border border-cyan-500/30 rounded-lg shadow-lg shadow-cyan-500/20 z-20;
+  }
+  .dropdown-item {
+    @apply w-full text-left px-4 py-2 text-sm text-white hover:bg-cyan-500/30 transition-colors;
+  }
+  .glassmorphism {
+    @apply bg-gray-800/30 backdrop-blur-md border border-cyan-500/20;
+  }
+}
